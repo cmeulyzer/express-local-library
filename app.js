@@ -15,7 +15,7 @@ var app = express();
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://cmeulyzer:init1234@ds233895.mlab.com:33895/locallib';
+var mongoDB = process.env.MONGODB_URI || 'mongodb://cmeulyzer:init1234@ds233895.mlab.com:33895/locallib';
 mongoose.connect(mongoDB, {
   useMongoClient: true
 });
